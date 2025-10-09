@@ -96,8 +96,8 @@ public class Form_Fornecedor extends javax.swing.JPanel {
             c.getId(),
             c.getNome(),
             c.getCnpj(),
-            c.getEndereco(),
             c.getTelefone(),
+            c.getEndereco(),
             c.getCidade().getNome()
             
         });
@@ -231,6 +231,12 @@ public class Form_Fornecedor extends javax.swing.JPanel {
         });
 
         jLabel6.setText("Cidade:");
+
+        cEndereco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cEnderecoActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setText("Endereço:");
@@ -385,6 +391,7 @@ public class Form_Fornecedor extends javax.swing.JPanel {
         cNome.setText(forn.getNome());
         cCNPJ.setText(forn.getCnpj().toString());
         cTelefone.setText(String.valueOf(forn.getTelefone()));
+        cEndereco.setText(forn.getNome());
         cCidade.setSelectedItem(forn.getCidade().getNome());
         validaTela("selecionado");
     }//GEN-LAST:event_tabelaMouseClicked
@@ -402,6 +409,7 @@ public class Form_Fornecedor extends javax.swing.JPanel {
             forn.setCnpj(cCNPJ.getText());
             String telefoneStr = cTelefone.getText().trim();
             forn.setTelefone(cTelefone.getText());
+            forn.setEndereco(cEndereco.getText());
             forn.setCidade(listaCidade.get(cCidade.getSelectedIndex()));
 
             HibernateUtil.beginTransaction();
@@ -465,6 +473,10 @@ public class Form_Fornecedor extends javax.swing.JPanel {
     private void cCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCidadeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cCidadeActionPerformed
+
+    private void cEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cEnderecoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cEnderecoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

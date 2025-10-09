@@ -4,14 +4,25 @@
  */
 package telas;
 
+
+import Form.Form_Cidade;
+import Form.Form_Cliente;
 import Form.Form_Compra;
 import Form.Form_ContasPagar;
 import Form.Form_ContasReceber;
+import Form.Form_Estado;
+import Form.Form_Fornecedor;
+import Form.Form_GrupoProduto;
 import Form.Form_Home;
+import Form.Form_Marca;
+import Form.Form_Os;
+import Form.Form_Produto;
+import Form.Form_Registrar;
+import Form.Form_RelEstado;
+import Form.Form_Sobre;
 import Form.Form_Venda;
 import evento.EventMenuSelected;
 import java.awt.Color;
-import static java.awt.SystemColor.menu;
 import static java.awt.image.ImageObserver.WIDTH;
 import javax.swing.JComponent;
 
@@ -21,32 +32,100 @@ import javax.swing.JComponent;
  */
 public class Main extends javax.swing.JFrame {
 
-   private Form_Home home;
-   private Form_Venda venda;
-   private Form_Compra compra;
-   private Form_ContasPagar contaspagar;
-   private Form_ContasReceber contasreceber;
+    
+    
+    private Form_Home home;
+    private Form_Sobre sobre;
+    private Form_Estado estado;
+    private Form_Cidade cidade;
+    private Form_Cliente cliente;
+    private Form_Fornecedor fornecedor;
+    private Form_GrupoProduto grupoProduto;
+    private Form_Marca marca;
+    private Form_Produto produto;
+    private Form_Os os;
+    private Form_Registrar registrar;
+    private Form_Venda venda;
+    private Form_Compra compra;
+    private Form_ContasPagar contaspagar;
+    private Form_ContasReceber contasreceber;
    
+    
     public Main() {
         initComponents();
         setBackground(new Color(0,0,0,0));
         home = new Form_Home();
+        sobre = new Form_Sobre();
+        estado = new Form_Estado();
+        cidade = new Form_Cidade();
+        cliente = new Form_Cliente();
+        fornecedor = new Form_Fornecedor();
+        grupoProduto = new Form_GrupoProduto();
+        registrar = new Form_Registrar();
+        produto = new Form_Produto();
+        os = new Form_Os();
+        marca = new Form_Marca();
         venda = new Form_Venda();
         compra = new Form_Compra();
         contaspagar = new Form_ContasPagar();
         contasreceber = new Form_ContasReceber();
-        panelBorder1.initMoving(this);
-         panelBorder1.addEventMenuSelected(new EventMenuSelected() {
+        menu.initMoving(Main.this);
+         menu.addEventMenuSelected(new EventMenuSelected() {
             @Override
             public void selected(int index) {
                if (index == 0) {
                     setForm(home);
+                } else if (index == 2){
+                    setForm(estado);
+                }else if (index == 3){
+                    setForm(cidade);
+                    cidade.montaCombo();
+                }else if (index == 4){
+                    setForm(cliente);
+                    cliente.montaCombo();
+                }else if (index == 5){
+                    setForm(fornecedor);
+                    fornecedor.montaCombo();
+                }else if (index == 6){
+                    setForm(grupoProduto);
+                }else if (index == 7){
+                    setForm(marca);
+                }else if (index == 8){
+                    setForm(produto);
+                    produto.montaCombo();
+                }else if (index == 9){
+                    setForm(compra);
+                    compra.montaComboFornecedores();
+                    compra.montaComboProdutos();
+                }else if (index == 10){
+                   setForm(venda);
+                   venda.montaComboClientes();
+                   venda.montaComboProdutos();
                 }else if (index == 11){
+                    setForm(os);
+                    os.montaCombo();
+                }else if (index == 12){
+                    setForm(sobre);
+                }else if (index == 13){
+                       setForm(contasreceber);
+                       contasreceber.montaCombo();
+                }else if (index == 14){
+                       setForm(contaspagar);
+                       contaspagar.montaCombo();
+                       
+                }else if (index == 15){
+                    setForm(registrar);
+                }else if (index == 16){
+                    dispose();
+                    Relatorios relatorios = new Relatorios();
+                    relatorios.setLocationRelativeTo(relatorios);
+                    relatorios.setVisible(true);
+                }else if (index == 17){
                     dispose();
                     TelaLogin login = new TelaLogin();
                     login.setLocationRelativeTo(login);
                     login.setVisible(true);
-                }else if (index == 12){
+                }else if (index == 18){
                     System.exit(WIDTH);
                 }
             }
@@ -60,8 +139,8 @@ public class Main extends javax.swing.JFrame {
         mainPanel.add(com);
         mainPanel.repaint();
         mainPanel.revalidate();
-    
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -72,12 +151,23 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        menuVenda1 = new coomponete.MenuVenda();
-        mainPanel = new javax.swing.JPanel();
+        menu1 = new coomponete.Menu();
         panelBorder1 = new entidades.Panel.PanelBorder();
+        mainPanel = new javax.swing.JPanel();
+        menu = new coomponete.Menu();
+
+        javax.swing.GroupLayout menu1Layout = new javax.swing.GroupLayout(menu1);
+        menu1.setLayout(menu1Layout);
+        menu1Layout.setHorizontalGroup(
+            menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        menu1Layout.setVerticalGroup(
+            menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocationByPlatform(true);
         setUndecorated(true);
 
         mainPanel.setBackground(new java.awt.Color(47, 59, 78));
@@ -88,38 +178,33 @@ public class Main extends javax.swing.JFrame {
         panelBorder1.setLayout(panelBorder1Layout);
         panelBorder1Layout.setHorizontalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(panelBorder1Layout.createSequentialGroup()
+                .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1391, Short.MAX_VALUE))
         );
         panelBorder1Layout.setVerticalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, 881, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(menuVenda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1193, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menuVenda1, javax.swing.GroupLayout.DEFAULT_SIZE, 881, Short.MAX_VALUE)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
-        getAccessibleContext().setAccessibleParent(this);
-
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -162,7 +247,10 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel mainPanel;
-    private coomponete.MenuVenda menuVenda1;
+    private coomponete.Menu menu;
+    private coomponete.Menu menu1;
     private entidades.Panel.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables
+
+    
 }

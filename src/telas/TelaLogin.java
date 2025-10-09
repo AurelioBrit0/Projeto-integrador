@@ -127,7 +127,7 @@ public class TelaLogin extends javax.swing.JFrame {
         System.out.println("Função do usuário logado: " + usuario.getFuncao());
         switch (usuario.getFuncao()) {
         case ADMINISTRADOR:
-            new Mainofc().setVisible(true);
+            new Main().setVisible(true);
             break;
         case VENDEDOR:
             new Vendas().setVisible(true);

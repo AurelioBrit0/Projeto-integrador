@@ -41,7 +41,7 @@ public class Relatorios extends javax.swing.JFrame {
                     setForm(relcidade);
                 }else if (index == 4){
                    dispose();
-                   new Mainofc().setVisible(true);
+                   new Main().setVisible(true);
                 }
             }
         });

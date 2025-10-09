@@ -493,6 +493,9 @@ public class Form_Os extends javax.swing.JPanel {
         dDescricao.setText("");
         dStatus.setSelectedItem(null);
         cCliente.setSelectedItem(null);
+        cDI.setDate(null);
+        cDT.setDate(null);
+        cPreco.setText("");
     }
     
     private void btNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoActionPerformed
@@ -539,10 +542,10 @@ public class Form_Os extends javax.swing.JPanel {
             os.setDescricao(dDescricao.getText());
             os.setPreco(Double.parseDouble(cPreco.getText().replace(".", "").replace(",", ".")));
             os.setDataInicio(cDI.getDate());
-            os.setDataInicio(cDT.getDate());
+            os.setDataFim(cDT.getDate());
             os.setStatus(dStatus.getSelectedItem().toString());
             os.setCliente(listaCliente.get(cCliente.getSelectedIndex()));
-
+            
             HibernateUtil.beginTransaction();
             HibernateUtil.getSession().persist(os);
             HibernateUtil.commitTransaction();
@@ -552,6 +555,7 @@ public class Form_Os extends javax.swing.JPanel {
 
             dDescricao.setText("");
             cDI.setCalendar(null);
+            cDT.setCalendar(null);
             dStatus.setSelectedItem(null);
             cCliente.setSelectedItem(null);
             validaTela("inicio");
