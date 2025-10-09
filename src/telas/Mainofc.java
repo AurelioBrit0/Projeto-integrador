@@ -1,0 +1,258 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package telas;
+
+
+import Form.Form_Cidade;
+import Form.Form_Cliente;
+import Form.Form_Compra;
+import Form.Form_ContasPagar;
+import Form.Form_ContasReceber;
+import Form.Form_Estado;
+import Form.Form_Fornecedor;
+import Form.Form_GrupoProduto;
+import Form.Form_Home;
+import Form.Form_Marca;
+import Form.Form_Os;
+import Form.Form_Produto;
+import Form.Form_Registrar;
+import Form.Form_RelEstado;
+import Form.Form_Sobre;
+import Form.Form_Venda;
+import evento.EventMenuSelected;
+import java.awt.Color;
+import static java.awt.image.ImageObserver.WIDTH;
+import javax.swing.JComponent;
+
+/**
+ *
+ * @author mathe
+ */
+public class Mainofc extends javax.swing.JFrame {
+
+    
+    
+    private Form_Home home;
+    private Form_Sobre sobre;
+    private Form_Estado estado;
+    private Form_Cidade cidade;
+    private Form_Cliente cliente;
+    private Form_Fornecedor fornecedor;
+    private Form_GrupoProduto grupoProduto;
+    private Form_Marca marca;
+    private Form_Produto produto;
+    private Form_Os os;
+    private Form_Registrar registrar;
+    private Form_Venda venda;
+    private Form_Compra compra;
+    private Form_ContasPagar contaspagar;
+    private Form_ContasReceber contasreceber;
+   
+    
+    public Mainofc() {
+        initComponents();
+        setBackground(new Color(0,0,0,0));
+        home = new Form_Home();
+        sobre = new Form_Sobre();
+        estado = new Form_Estado();
+        cidade = new Form_Cidade();
+        cliente = new Form_Cliente();
+        fornecedor = new Form_Fornecedor();
+        grupoProduto = new Form_GrupoProduto();
+        registrar = new Form_Registrar();
+        produto = new Form_Produto();
+        os = new Form_Os();
+        marca = new Form_Marca();
+        venda = new Form_Venda();
+        compra = new Form_Compra();
+        contaspagar = new Form_ContasPagar();
+        contasreceber = new Form_ContasReceber();
+        menu.initMoving(Mainofc.this);
+         menu.addEventMenuSelected(new EventMenuSelected() {
+            @Override
+            public void selected(int index) {
+               if (index == 0) {
+                    setForm(home);
+                } else if (index == 2){
+                    setForm(estado);
+                }else if (index == 3){
+                    setForm(cidade);
+                    cidade.montaCombo();
+                }else if (index == 4){
+                    setForm(cliente);
+                    cliente.montaCombo();
+                }else if (index == 5){
+                    setForm(fornecedor);
+                    fornecedor.montaCombo();
+                }else if (index == 6){
+                    setForm(grupoProduto);
+                }else if (index == 7){
+                    setForm(marca);
+                }else if (index == 8){
+                    setForm(produto);
+                    produto.montaCombo();
+                }else if (index == 9){
+                    setForm(compra);
+                    compra.montaComboFornecedores();
+                    compra.montaComboProdutos();
+                }else if (index == 10){
+                   setForm(venda);
+                   venda.montaComboClientes();
+                   venda.montaComboProdutos();
+                }else if (index == 11){
+                    setForm(os);
+                    os.montaCombo();
+                }else if (index == 12){
+                    setForm(sobre);
+                }else if (index == 13){
+                       setForm(contasreceber);
+                       contasreceber.montaCombo();
+                }else if (index == 14){
+                       setForm(contaspagar);
+                       contaspagar.montaCombo();
+                       
+                }else if (index == 15){
+                    setForm(registrar);
+                }else if (index == 16){
+                    dispose();
+                    Relatorios relatorios = new Relatorios();
+                    relatorios.setLocationRelativeTo(relatorios);
+                    relatorios.setVisible(true);
+                }else if (index == 17){
+                    dispose();
+                    TelaLogin login = new TelaLogin();
+                    login.setLocationRelativeTo(login);
+                    login.setVisible(true);
+                }else if (index == 18){
+                    System.exit(WIDTH);
+                }
+            }
+        });
+        //  set when system open start with home form
+        setForm(new Form_Home());
+    }
+    
+     private void setForm(JComponent com) {
+        mainPanel.removeAll();
+        mainPanel.add(com);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+    }
+    
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        menu1 = new coomponete.Menu();
+        panelBorder1 = new entidades.Panel.PanelBorder();
+        mainPanel = new javax.swing.JPanel();
+        menu = new coomponete.Menu();
+
+        javax.swing.GroupLayout menu1Layout = new javax.swing.GroupLayout(menu1);
+        menu1.setLayout(menu1Layout);
+        menu1Layout.setHorizontalGroup(
+            menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        menu1Layout.setVerticalGroup(
+            menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        mainPanel.setBackground(new java.awt.Color(47, 59, 78));
+        mainPanel.setOpaque(false);
+        mainPanel.setLayout(new java.awt.BorderLayout());
+
+        javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
+        panelBorder1.setLayout(panelBorder1Layout);
+        panelBorder1Layout.setHorizontalGroup(
+            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBorder1Layout.createSequentialGroup()
+                .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1373, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelBorder1Layout.setVerticalGroup(
+            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, 881, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
+        );
+
+        pack();
+        setLocationRelativeTo(null);
+    }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Mainofc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Mainofc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Mainofc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Mainofc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Mainofc().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel mainPanel;
+    private coomponete.Menu menu;
+    private coomponete.Menu menu1;
+    private entidades.Panel.PanelBorder panelBorder1;
+    // End of variables declaration//GEN-END:variables
+
+    
+}
