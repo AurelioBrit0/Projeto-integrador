@@ -42,6 +42,11 @@ public class Vendas extends javax.swing.JFrame {
                if (index == 0) {
                     setForm(home);
                 }else if (index == 11){
+                    dispose();
+                    TelaLogin login = new TelaLogin();
+                    login.setLocationRelativeTo(login);
+                    login.setVisible(true);
+                }else if (index == 12){
                     System.exit(WIDTH);
                 }
             }

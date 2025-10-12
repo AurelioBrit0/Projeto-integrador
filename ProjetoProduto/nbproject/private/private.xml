@@ -6,7 +6,6 @@
             <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/TelaLogin.java</file>
             <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/Form/Form_Cliente.java</file>
             <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/Form/Form_Cidade.java</file>
-            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/Main.java</file>
             <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/entidades/Usuario.java</file>
             <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/ClienteTela.java</file>
             <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/persistencia/HibernateUtil.java</file>
@@ -17,6 +16,17 @@
             <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/entidades/Venda.java</file>
             <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/TelaRegistrar.java</file>
             <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/TelaPrincipal.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/Mainofc.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/Main1.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/entidades/Panel/PanelBorder.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/entidades/Panel/PanelBorder1.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/modelo/MenuItem.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/coomponete/Menu.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/evento/EventMenuSelected.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/Vendas.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/Main.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/telas/Principal.java</file>
+            <file>file:/C:/Users/mathe/OneDrive/Desktop/Tree/Faculdade/projetos/ProjetoProduto_0309/ProjetoProduto/ProjetoProduto/src/coomponete/MenuPrincipal.java</file>
         </group>
     </open-files>
 </project-private>

@@ -28,6 +28,7 @@ public class OrdemdeServico {
     private String status;
     @Column(length = 200, nullable = false)
     private String descricao;
+    private Double preco;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataInicio;
     @Temporal(TemporalType.TIMESTAMP)
@@ -85,5 +86,14 @@ public class OrdemdeServico {
         this.cliente = cliente;
     }
 
+    public Double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+    
+    
     
 }

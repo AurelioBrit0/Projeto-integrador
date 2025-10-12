@@ -30,6 +30,7 @@ public class Form_Os extends javax.swing.JPanel {
             cDT.setEnabled(false);
             cTelefone.setEnabled(false);
             cCliente.setEnabled(false);
+            cPreco.setEnabled(false);
             dStatus.setEnabled(false);
             btNovo.setEnabled(true);
             btEditar.setEnabled(false);
@@ -41,6 +42,7 @@ public class Form_Os extends javax.swing.JPanel {
             cDI.setEnabled(true);
             cDT.setEnabled(true);
             cTelefone.setEnabled(true);
+            cPreco.setEnabled(true);
             dStatus.setEnabled(true);
             cCliente.setEnabled(true);
             btNovo.setEnabled(false);
@@ -53,6 +55,7 @@ public class Form_Os extends javax.swing.JPanel {
             cDI.setEnabled(false);
             cDT.setEnabled(false);
             cTelefone.setEnabled(false);
+            cPreco.setEnabled(false);
             dStatus.setEnabled(false);
             cCliente.setEnabled(false);
             btNovo.setEnabled(true);
@@ -86,6 +89,7 @@ public class Form_Os extends javax.swing.JPanel {
     modelo.addColumn("Código");
     modelo.addColumn("Status");
     modelo.addColumn("Cliente");
+    modelo.addColumn("Preço");
     modelo.addColumn("Data de Inicio");
     modelo.addColumn("Data final");
     modelo.addColumn("Descrição");
@@ -99,6 +103,7 @@ public class Form_Os extends javax.swing.JPanel {
             os.getId(),
             os.getStatus(),
             os.getCliente().getNome(),
+            os.getPreco(),
             os.getDataInicio(),
             os.getDataFim(),
             os.getDescricao()
@@ -140,6 +145,8 @@ public class Form_Os extends javax.swing.JPanel {
         btSalvar = new javax.swing.JButton();
         btNovo = new javax.swing.JButton();
         btCancelar = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        cPreco = new util.JMoneyField();
         jPanel2 = new javax.swing.JPanel();
         btExcluir = new javax.swing.JButton();
         btEditar = new javax.swing.JButton();
@@ -263,13 +270,19 @@ public class Form_Os extends javax.swing.JPanel {
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Valor:");
+
+        cPreco.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel5)
@@ -277,7 +290,13 @@ public class Form_Os extends javax.swing.JPanel {
                         .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(cTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(50, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -301,8 +320,7 @@ public class Form_Os extends javax.swing.JPanel {
                             .addComponent(btNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                        .addGap(90, 90, 90))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,24 +338,25 @@ public class Form_Os extends javax.swing.JPanel {
                         .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(dStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(dStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
+                        .addContainerGap()
                         .addComponent(btNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                        .addGap(58, 58, 58)))
+                        .addComponent(btCancelar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel11)
+                    .addComponent(cPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -405,10 +424,11 @@ public class Form_Os extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(7, 7, 7)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btEditar)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btExcluir))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btExcluir, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btEditar)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(20, Short.MAX_VALUE))
@@ -473,6 +493,9 @@ public class Form_Os extends javax.swing.JPanel {
         dDescricao.setText("");
         dStatus.setSelectedItem(null);
         cCliente.setSelectedItem(null);
+        cDI.setDate(null);
+        cDT.setDate(null);
+        cPreco.setText("");
     }
     
     private void btNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoActionPerformed
@@ -499,6 +522,7 @@ public class Form_Os extends javax.swing.JPanel {
     private void tabelaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaMouseClicked
         os = lista.get(tabela.getSelectedRow());
         dDescricao.setText(os.getDescricao());
+        cPreco.setText(String.valueOf(os.getPreco()));
         cDI.setDate(os.getDataInicio());
         cDT.setDate(os.getDataFim());
         dStatus.setSelectedItem(os.getStatus());
@@ -516,11 +540,12 @@ public class Form_Os extends javax.swing.JPanel {
         if (validaCampos()) {
 
             os.setDescricao(dDescricao.getText());
+            os.setPreco(Double.parseDouble(cPreco.getText().replace(".", "").replace(",", ".")));
             os.setDataInicio(cDI.getDate());
-            os.setDataInicio(cDT.getDate());
+            os.setDataFim(cDT.getDate());
             os.setStatus(dStatus.getSelectedItem().toString());
             os.setCliente(listaCliente.get(cCliente.getSelectedIndex()));
-
+            
             HibernateUtil.beginTransaction();
             HibernateUtil.getSession().persist(os);
             HibernateUtil.commitTransaction();
@@ -530,6 +555,7 @@ public class Form_Os extends javax.swing.JPanel {
 
             dDescricao.setText("");
             cDI.setCalendar(null);
+            cDT.setCalendar(null);
             dStatus.setSelectedItem(null);
             cCliente.setSelectedItem(null);
             validaTela("inicio");
@@ -572,11 +598,13 @@ public class Form_Os extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cCliente;
     private com.toedter.calendar.JDateChooser cDI;
     private com.toedter.calendar.JDateChooser cDT;
+    private util.JMoneyField cPreco;
     private javax.swing.JTextField cTelefone;
     private javax.swing.JTextArea dDescricao;
     private javax.swing.JComboBox<String> dStatus;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

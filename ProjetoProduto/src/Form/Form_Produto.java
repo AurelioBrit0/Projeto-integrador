@@ -171,6 +171,12 @@ public class Form_Produto extends javax.swing.JPanel {
             }
         });
 
+        pPreco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pPrecoActionPerformed(evt);
+            }
+        });
+
         btSalvar.setText("Salvar");
         btSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -463,6 +469,10 @@ public class Form_Produto extends javax.swing.JPanel {
     private void pGrupodeProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pGrupodeProdutoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pGrupodeProdutoActionPerformed
+
+    private void pPrecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pPrecoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pPrecoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

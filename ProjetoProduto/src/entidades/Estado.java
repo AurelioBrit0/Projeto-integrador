@@ -22,7 +22,7 @@ public class Estado {
     private Long id;
     @Column(length = 200, unique = true, nullable = false)
     private String nome;
-    @Column(length = 2, unique = true, nullable = false)
+    @Column(length = 2, unique = false, nullable = false)
     private String uf;
 
     public Long getId() {

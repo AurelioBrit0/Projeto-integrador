@@ -18,6 +18,7 @@ import Form.Form_Marca;
 import Form.Form_Os;
 import Form.Form_Produto;
 import Form.Form_Registrar;
+import Form.Form_RelEstado;
 import Form.Form_Sobre;
 import Form.Form_Venda;
 import evento.EventMenuSelected;
@@ -91,21 +92,40 @@ public class Main extends javax.swing.JFrame {
                     setForm(marca);
                 }else if (index == 8){
                     setForm(produto);
+                    produto.montaCombo();
                 }else if (index == 9){
                     setForm(compra);
+                    compra.montaComboFornecedores();
+                    compra.montaComboProdutos();
                 }else if (index == 10){
                    setForm(venda);
+                   venda.montaComboClientes();
+                   venda.montaComboProdutos();
                 }else if (index == 11){
                     setForm(os);
+                    os.montaCombo();
                 }else if (index == 12){
                     setForm(sobre);
                 }else if (index == 13){
                        setForm(contasreceber);
+                       contasreceber.montaCombo();
                 }else if (index == 14){
                        setForm(contaspagar);
+                       contaspagar.montaCombo();
+                       
                 }else if (index == 15){
                     setForm(registrar);
                 }else if (index == 16){
+                    dispose();
+                    Relatorios relatorios = new Relatorios();
+                    relatorios.setLocationRelativeTo(relatorios);
+                    relatorios.setVisible(true);
+                }else if (index == 17){
+                    dispose();
+                    TelaLogin login = new TelaLogin();
+                    login.setLocationRelativeTo(login);
+                    login.setVisible(true);
+                }else if (index == 18){
                     System.exit(WIDTH);
                 }
             }
@@ -212,6 +232,9 @@ public class Main extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
