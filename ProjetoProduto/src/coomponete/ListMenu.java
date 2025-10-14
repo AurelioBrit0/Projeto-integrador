@@ -1,5 +1,6 @@
-package modelo;
+package coomponete;
 
+import coomponete.Modelo_Menu;
 import evento.EventMenuSelected;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;

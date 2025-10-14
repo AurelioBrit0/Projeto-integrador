@@ -99,6 +99,7 @@ public class Main extends javax.swing.JFrame {
                     compra.montaComboProdutos();
                 }else if (index == 10){
                    setForm(venda);
+                  
                    venda.montaComboClientes();
                    venda.montaComboProdutos();
                 }else if (index == 11){
@@ -109,10 +110,11 @@ public class Main extends javax.swing.JFrame {
                 }else if (index == 13){
                        setForm(contasreceber);
                        contasreceber.montaCombo();
+                       contasreceber.montaTabela();
                 }else if (index == 14){
                        setForm(contaspagar);
                        contaspagar.montaCombo();
-                       
+                       contaspagar.montaTabela();
                 }else if (index == 15){
                     setForm(registrar);
                 }else if (index == 16){
@@ -152,7 +154,7 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         menu1 = new coomponete.Menu();
-        panelBorder1 = new entidades.Panel.PanelBorder();
+        panelBorder1 = new coomponete.PanelBorder();
         mainPanel = new javax.swing.JPanel();
         menu = new coomponete.Menu();
 
@@ -249,7 +251,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel mainPanel;
     private coomponete.Menu menu;
     private coomponete.Menu menu1;
-    private entidades.Panel.PanelBorder panelBorder1;
+    private coomponete.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables
 
     

@@ -10,7 +10,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.JFrame;
-import modelo.Modelo_Menu;
 
 public class Menu extends javax.swing.JPanel {
 
@@ -58,7 +57,7 @@ public class Menu extends javax.swing.JPanel {
 
         panelMoving = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        listMenu = new modelo.ListMenu<>();
+        listMenu = new coomponete.ListMenu<>();
 
         panelMoving.setOpaque(false);
 
@@ -133,7 +132,7 @@ public class Menu extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private modelo.ListMenu<String> listMenu;
+    private coomponete.ListMenu<String> listMenu;
     private javax.swing.JPanel panelMoving;
     // End of variables declaration//GEN-END:variables
 

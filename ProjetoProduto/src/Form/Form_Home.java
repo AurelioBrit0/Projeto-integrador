@@ -30,15 +30,17 @@ public class Form_Home extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(165, 165, 165));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("<html><u>SGEV</u></html>");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Historic", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Sistema de Gerenciamento ");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Historic", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("de Estoque e Vendas");
 
@@ -50,7 +52,7 @@ public class Form_Home extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1172, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1379, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -63,7 +65,7 @@ public class Form_Home extends javax.swing.JPanel {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addContainerGap(378, Short.MAX_VALUE))
+                .addContainerGap(444, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

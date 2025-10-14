@@ -28,6 +28,8 @@ public class Form_Sobre extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(165, 165, 165));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("<html>A TechVision Comércio de Produtos e Acessórios foi fundada em 2018,<br>  na cidade de Paranavaí, com o objetivo de oferecer produtos de<br>  tecnologia e eletrônicos para o público local.<br><br>   A empresa surgiu da necessidade de atender a demanda por produtos<br>  de qualidade e bom atendimento, crescendo de forma gradual.<br> <br>   Com o aumento dos clientes e do volume de vendas, percebeu-se<br>  a necessidade de melhorar os processos internos. Assim, a empresa<br>  optou por desenvolver um sistema próprio de controle de vendas<br>  e estoque, buscando mais organização, agilidade e eficiência na gestão.</html> ");
@@ -36,16 +38,17 @@ public class Form_Sobre extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(272, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 884, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(235, 235, 235))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(225, 225, 225)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 217, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -387,7 +387,7 @@ public class ContasPagarTela extends javax.swing.JDialog {
 
         if (validaCampos()) {
 
-            //cr.setId(Long.MIN_VALUE);
+           
             cr.setObservacao(cObservacao.getText());
             cr.setDataLacamento(cDl.getDate());
             cr.setDataPagamento(cDp.getDate());

@@ -134,10 +134,7 @@ public class TelaLogin extends javax.swing.JFrame {
             this.dispose(); 
             break;
         case TECNICO:
-            new Form_Os().setVisible(true);
-            break;
-        case FINANCEIRO:
-            new Form_ContasPagar().setVisible(true);
+            new Tecnico().setVisible(true);
             break;
         default:
             JOptionPane.showMessageDialog(this, "Papel não reconhecido!");

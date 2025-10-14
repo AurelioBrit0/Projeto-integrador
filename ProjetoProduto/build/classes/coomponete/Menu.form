@@ -70,7 +70,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="modelo.ListMenu" name="listMenu">
+    <Component class="coomponete.ListMenu" name="listMenu">
       <Properties>
         <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
           <StringArray count="0"/>
