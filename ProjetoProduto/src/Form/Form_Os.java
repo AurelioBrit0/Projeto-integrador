@@ -95,6 +95,8 @@ public class Form_Os extends javax.swing.JPanel {
     modelo.addColumn("Descrição");
     
 
+    
+    
     this.lista = (List<OrdemdeServico>) HibernateUtil.getSession().createQuery("from OrdemdeServico").list();
  
 

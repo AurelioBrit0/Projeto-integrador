@@ -87,7 +87,7 @@ public class HibernateUtil {
                     .setProperty("hibernate.hbm2ddl.auto", "update")
                     .setProperty("hibernate.c3p0.max_size", "10")
                     .setProperty("hibernate.c3p0.min_size", "2")
-                    .setProperty("hibernate.c3p0.timeout", "5000")
+                    .setProperty("hibernate.c3p0.timeout", "5000") 
                     .setProperty("hibernate.c3p0.max_statements", "10")
                     .setProperty("hibernate.c3p0.idle_test_period", "3000")
                     .setProperty("hibernate.c3p0.acquire_increment", "2")

@@ -6,7 +6,6 @@ package telas;
 
 import Form.Form_Home;
 import Form.Form_Os;
-import Form.Form_RelOs;
 import evento.EventMenuSelected;
 import java.awt.Color;
 import static java.awt.image.ImageObserver.WIDTH;
@@ -20,7 +19,6 @@ public class Tecnico extends javax.swing.JFrame {
 
    private Form_Home home;
    private Form_Os os;
-   private Form_RelOs relos;
 
    
     public Tecnico() {
@@ -28,7 +26,6 @@ public class Tecnico extends javax.swing.JFrame {
         setBackground(new Color(0,0,0,0));
         home = new Form_Home();
         os = new Form_Os();
-        relos = new Form_RelOs();
         menuTecnico.initMoving(this);
          menuTecnico.addEventMenuSelected(new EventMenuSelected() {
             @Override
@@ -37,14 +34,12 @@ public class Tecnico extends javax.swing.JFrame {
                     setForm(home);
                     }else if (index == 2){
                     setForm(os);
-                    }else if (index == 3){
-                    setForm(relos);
-                }else if (index == 4){
+                }else if (index == 3){
                     dispose();
                     TelaLogin login = new TelaLogin();
                     login.setLocationRelativeTo(login);
                     login.setVisible(true);
-                }else if (index == 5){
+                }else if (index == 4){
                     System.exit(WIDTH);
                 }
             }

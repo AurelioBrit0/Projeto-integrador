@@ -707,6 +707,7 @@ public class Form_Venda extends javax.swing.JPanel {
             venda.getContasRecebers().add(cr);
         }
         montaTabelaParcelas();
+        cParcelas.setText("");
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 

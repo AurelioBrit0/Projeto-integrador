@@ -100,7 +100,7 @@ public class Form_RelOs extends javax.swing.JPanel {
 
             // Parâmetros do relatório (se não tiver, pode passar vazio)
             Map<String, Object> parametros = new HashMap<>();
-            parametros.put("filtro", "%"+cFiltro.getText()+"%"); 
+            parametros.put("Filtro", "%"+cFiltro.getText()+"%"); 
 
             // Conexão com banco de dados (exemplo usando MySQL)
             Connection conexao = DriverManager.getConnection(

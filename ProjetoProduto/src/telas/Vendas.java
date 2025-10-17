@@ -4,14 +4,14 @@
  */
 package telas;
 
-import Form.Form_Compra;
-import Form.Form_ContasPagar;
 import Form.Form_ContasReceber;
+import Form.Form_GrupoProduto;
 import Form.Form_Home;
+import Form.Form_Marca;
+import Form.Form_Produto;
 import Form.Form_Venda;
 import evento.EventMenuSelected;
 import java.awt.Color;
-import static java.awt.SystemColor.menu;
 import static java.awt.image.ImageObserver.WIDTH;
 import javax.swing.JComponent;
 
@@ -23,30 +23,43 @@ public class Vendas extends javax.swing.JFrame {
 
    private Form_Home home;
    private Form_Venda venda;
-   private Form_Compra compra;
-   private Form_ContasPagar contaspagar;
    private Form_ContasReceber contasreceber;
+   private Form_GrupoProduto grp;
+   private Form_Marca marca;
+   private Form_Produto produto;
+
    
     public Vendas() {
         initComponents();
         setBackground(new Color(0,0,0,0));
         home = new Form_Home();
         venda = new Form_Venda();
-        compra = new Form_Compra();
-        contaspagar = new Form_ContasPagar();
         contasreceber = new Form_ContasReceber();
-        menuVenda1.initMoving(this);
-         menuVenda1.addEventMenuSelected(new EventMenuSelected() {
+        grp = new Form_GrupoProduto();
+        marca = new Form_Marca();
+        produto = new Form_Produto();
+        menuVenda.initMoving(this);
+         menuVenda.addEventMenuSelected(new EventMenuSelected() {
             @Override
             public void selected(int index) {
                if (index == 0) {
                     setForm(home);
-                }else if (index == 11){
+                    }else if (index == 2){
+                    setForm(grp);
+                    }else if (index == 3){
+                    setForm(marca);
+                    }else if (index == 4){
+                    setForm(produto);
+                    }else if (index == 5){
+                    setForm(venda);
+                    }else if (index == 6){
+                    setForm(contasreceber);
+                }else if (index == 7){
                     dispose();
                     TelaLogin login = new TelaLogin();
                     login.setLocationRelativeTo(login);
                     login.setVisible(true);
-                }else if (index == 12){
+                }else if (index == 8){
                     System.exit(WIDTH);
                 }
             }
@@ -72,8 +85,8 @@ public class Vendas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        menuVenda1 = new coomponete.MenuVenda();
         mainPanel = new javax.swing.JPanel();
+        menuVenda = new coomponete.MenuVenda();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -88,15 +101,16 @@ public class Vendas extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(menuVenda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(menuVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1382, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menuVenda1, javax.swing.GroupLayout.DEFAULT_SIZE, 881, Short.MAX_VALUE)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 881, Short.MAX_VALUE)
+            .addComponent(menuVenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         getAccessibleContext().setAccessibleParent(this);
@@ -142,6 +156,6 @@ public class Vendas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel mainPanel;
-    private coomponete.MenuVenda menuVenda1;
+    private coomponete.MenuVenda menuVenda;
     // End of variables declaration//GEN-END:variables
 }

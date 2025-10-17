@@ -33,14 +33,10 @@ public class MenuVenda extends javax.swing.JPanel {
         listMenu.addItem(new Modelo_Menu("1", "Grupo produto", Modelo_Menu.MenuType.MENU));
         listMenu.addItem(new Modelo_Menu("2", "Marcar", Modelo_Menu.MenuType.MENU));
         listMenu.addItem(new Modelo_Menu("3", "Produto", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("4", "Compra", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("5", "Venda", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("6", "Ordem de serviço", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("7", "Sobre", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("8", "Receber", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("9", "Pagar", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("10", "Logout", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("11", "sair", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("4", "Venda", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("5", "Receber", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("6", "Logout", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("7", "sair", Modelo_Menu.MenuType.MENU));
         listMenu.addItem(new Modelo_Menu("", "", Modelo_Menu.MenuType.EMPTY));
 
     }

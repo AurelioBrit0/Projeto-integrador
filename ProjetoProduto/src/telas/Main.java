@@ -117,6 +117,7 @@ public class Main extends javax.swing.JFrame {
                        contaspagar.montaTabela();
                 }else if (index == 15){
                     setForm(registrar);
+                    registrar.montaTabela( );
                 }else if (index == 16){
                     dispose();
                     Relatorios relatorios = new Relatorios();

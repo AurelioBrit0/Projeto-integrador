@@ -32,7 +32,13 @@ public class MenuRelatorio extends javax.swing.JPanel {
         listMenu.addItem(new Modelo_Menu("", "", Modelo_Menu.MenuType.EMPTY));
         listMenu.addItem(new Modelo_Menu("1", "Relatório Estado", Modelo_Menu.MenuType.MENU));
         listMenu.addItem(new Modelo_Menu("2", "Relatório Cidade", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("3", "Voltar tela", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("3", "Relatório Cliente", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("4", "Relatório Grupo produto", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("5", "Relatório Produto", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("6", "Relatório Venda", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("7", "Relatório OS", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("8", "Relatório Usuário", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("9", "Voltar tela", Modelo_Menu.MenuType.MENU));
         listMenu.addItem(new Modelo_Menu("", "", Modelo_Menu.MenuType.EMPTY));
 
     }

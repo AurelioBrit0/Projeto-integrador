@@ -7,7 +7,13 @@ package telas;
 
 import Form.Form_Home;
 import Form.Form_RelCidade;
+import Form.Form_RelCliente;
 import Form.Form_RelEstado;
+import Form.Form_RelGrp;
+import Form.Form_RelOs;
+import Form.Form_RelProduto;
+import Form.Form_RelUsuario;
+import Form.Form_RelVenda;
 import evento.EventMenuSelected;
 import java.awt.Color;
 import javax.swing.JComponent;
@@ -21,6 +27,12 @@ public class Relatorios extends javax.swing.JFrame {
    private Form_Home home;
    private Form_RelEstado relestado;
    private Form_RelCidade relcidade;
+   private Form_RelCliente cliente;
+   private Form_RelGrp grp;
+   private Form_RelProduto produto;
+   private Form_RelVenda venda;
+   private Form_RelOs os;
+   private Form_RelUsuario usuario;
    
    
     public Relatorios() {
@@ -29,6 +41,12 @@ public class Relatorios extends javax.swing.JFrame {
         home = new Form_Home();
         relestado = new Form_RelEstado();
         relcidade = new Form_RelCidade();
+        cliente = new Form_RelCliente();
+        grp = new Form_RelGrp();
+        produto = new Form_RelProduto();
+        venda = new Form_RelVenda();
+        os = new Form_RelOs();
+        usuario = new Form_RelUsuario();
         menuRelatorio.initMoving(this);
          menuRelatorio.addEventMenuSelected(new EventMenuSelected() {
             @Override
@@ -40,6 +58,18 @@ public class Relatorios extends javax.swing.JFrame {
                 }else if (index == 3){
                     setForm(relcidade);
                 }else if (index == 4){
+                    setForm(cliente);
+                    }else if (index == 5){
+                    setForm(grp);
+                    }else if (index == 6){
+                    setForm(produto);
+                    }else if (index == 7){
+                    setForm(venda);
+                    }else if (index == 8){
+                    setForm(os);
+                    }else if (index == 9){
+                    setForm(usuario);
+                }else if (index == 10){
                    dispose();
                    new Main().setVisible(true);
                 }

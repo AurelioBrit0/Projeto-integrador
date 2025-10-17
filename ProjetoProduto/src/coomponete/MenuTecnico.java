@@ -31,9 +31,8 @@ public class MenuTecnico extends javax.swing.JPanel {
         listMenu.addItem(new Modelo_Menu("", "", Modelo_Menu.MenuType.EMPTY));
         listMenu.addItem(new Modelo_Menu("", "", Modelo_Menu.MenuType.EMPTY));
         listMenu.addItem(new Modelo_Menu("1", "Ordem de serviço", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("2", "Relatório", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("3", "Logout", Modelo_Menu.MenuType.MENU));
-        listMenu.addItem(new Modelo_Menu("4", "sair", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("2", "Logout", Modelo_Menu.MenuType.MENU));
+        listMenu.addItem(new Modelo_Menu("3", "sair", Modelo_Menu.MenuType.MENU));
         listMenu.addItem(new Modelo_Menu("", "", Modelo_Menu.MenuType.EMPTY));
 
     }
